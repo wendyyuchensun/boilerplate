@@ -3,26 +3,21 @@
 const path = require('path')
 
 module.exports = {
-  entry: './src/app.js',
+  entry: './src/app.ts',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'app.bundle.js',
   },
+  devtool: 'source-map',
+  resolve: {
+    extensions: ['.ts'],
+  },
   module: {
     rules: [
       {
-        test: /.js$/,
+        test: /.ts$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        options: {
-          presets: [
-            'env',
-          ],
-          plugins: [
-            'transform-class-properties',
-            'transform-object-rest-spread',
-          ],
-        },
+        loader: ['ts-loader'],
       },
     ],
   },
