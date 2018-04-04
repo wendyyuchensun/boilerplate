@@ -10,16 +10,30 @@ module.exports = {
   },
   devtool: 'source-map',
   resolve: {
-    extensions: ['.ts'],
+    extensions: ['.ts', '.tsx', '.js', '.json'],
   },
   module: {
     rules: [
       {
-        test: /.ts$/,
+        test: /.tsx?$/,
         exclude: /node_modules/,
-        loader: ['ts-loader'],
+        loader: 'ts-loader',
+      },
+      {
+        test: /.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+      },
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        loader: 'source-map-loader',
       },
     ],
   },
   mode: 'none',
+  externals: {
+    'react': 'React',
+    'react-dom': 'ReactDOM',
+  },
 }
