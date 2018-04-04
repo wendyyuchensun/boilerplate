@@ -32,8 +32,4 @@ module.exports = {
     ],
   },
   mode: 'none',
-  externals: {
-    'react': 'React',
-    'react-dom': 'ReactDOM',
-  },
 }
