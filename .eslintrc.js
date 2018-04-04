@@ -26,6 +26,7 @@ module.exports = {
             "never"
         ]
     },
+    "parser": "babel-eslint",
     "parserOptions": {
         "sourceType": "module",
         "ecmaFeatures": {
