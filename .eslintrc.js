@@ -4,7 +4,10 @@ module.exports = {
         "es6": true,
         "node": true
     },
-    "extends": "eslint:recommended",
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+    ],
     "rules": {
         "indent": [
             "error",
@@ -22,5 +25,11 @@ module.exports = {
             "error",
             "never"
         ]
-    }
+    },
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaFeatures": {
+          "jsx": true
+        },
+    },
 };
