@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "setup": "npm install",
     "bundle": "node_modules/.bin/webpack"
   },
   "keywords": [],
