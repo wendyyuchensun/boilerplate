@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/app.bundle.js",
   "scripts": {
-    "setup": "rm -rf .git && git init && npm install && git add . && git commit -m 'Setup project'",
+    "setup": "rm -rf .git && rm README.md && git init && npm install && git add . && git commit -m 'Setup project'",
     "bundle": "node_modules/.bin/webpack"
   },
   "keywords": [],
